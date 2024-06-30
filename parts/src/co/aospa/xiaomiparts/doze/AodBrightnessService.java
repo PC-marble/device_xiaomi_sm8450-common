@@ -22,8 +22,6 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
 
-import co.aospa.xiaomiparts.display.DfWrapper;
-
 public class AodBrightnessService extends Service {
 
     private static final String TAG = "AodBrightnessService";
@@ -149,8 +147,7 @@ public class AodBrightnessService extends Service {
                 || mDisplayState == Display.STATE_DOZE_SUSPEND);
         final int mode = !isDozeState ? 0 : (mIsDozeHbm ? 1 : 2);
         try {
-            DfWrapper.setDisplayFeature(
-                    new DfWrapper.DfParams(/*DOZE_BRIGHTNESS_STATE*/ 25, mode, 0));
+
         } catch (Exception e) {
             Log.e(TAG, "updateDozeBrightness failed!", e);
         }
