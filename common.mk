@@ -289,6 +289,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Platform
+TARGET_BOARD_PLATFORM := taro
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
@@ -352,14 +355,12 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
-    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_PACKAGES += \
     qcrilNrDb_vendor
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_COPY_FILES += \
