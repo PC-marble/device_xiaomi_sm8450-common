@@ -300,6 +300,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/taro/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# QC common
+TARGET_COMMON_QTI_COMPONENTS := \
+    telephony
+
 # QMI
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor:64 # Needed by CNE app
