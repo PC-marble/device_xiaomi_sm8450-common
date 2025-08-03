@@ -38,9 +38,6 @@ lib_fixups: lib_fixups_user_type = {
     (
         'vendor.qti.hardware.dpmservice@1.0',
         'vendor.qti.hardware.dpmservice@1.1',
-        'vendor.qti.hardware.qccsyshal@1.0',
-        'vendor.qti.hardware.qccsyshal@1.1',
-        'vendor.qti.hardware.qccvndhal@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
@@ -86,10 +83,6 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.sharedsecret-V1-ndk.so',
         )
         .add_needed('android.hardware.security.rkp-V1-ndk.so'),
-    'vendor/bin/qcc-trd': blob_fixup()
-        .replace_needed(
-            'libgrpc++_unsecure.so', 'libgrpc++_unsecure_prebuilt.so'
-        ),
     (
        'vendor/etc/media_codecs_cape.xml',
        'vendor/etc/media_codecs_diwali_v0.xml',
